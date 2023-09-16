@@ -53,7 +53,8 @@ class HumanPlayer(Player):
             if choice in MOVES:
                 return choice
             else:
-                print("Invalid choice. Choose from rock, paper, or scissors.")
+                print("Invalid choice. Choose from rock, paper, "
+                      "or scissors.")
 
 
 def beats(one, two):
@@ -96,17 +97,20 @@ class Game:
                 print("Player 2 played:")
                 print(symbol)
 
-        print(f"Player 1 score: {self.player1_score}  Player 2 score: {self.player2_score}")
+        print(f"Player 1 score: {self.player1_score}  "
+              f"Player 2 score: {self.player2_score}")
 
     def display_final_score(self):
         print("\nFinal Score:")
-        print(f"Player 1 score: {self.player1_score}  Player 2 score: {self.player2_score}")
+        print(f"Player 1 score: {self.player1_score}  "
+              f"Player 2 score: {self.player2_score}")
 
 
-def main():
+def play_game():
     os.system("clear")
     print("\t\t\t\t-------- 🔥Janken🔥 --------")
-    print('Game of Rock Paper Scissors, also known as "Janken" in Japanese\n')
+    print('Game of Rock Paper Scissors, also known '
+          'as "Janken" in Japanese\n')
 
     human_player = HumanPlayer()
     computer_player = RandomPlayer()
@@ -120,17 +124,19 @@ def main():
         game.display_final_score()  # Display final scores
 
         while True:
-            game_checker = input("Type 'quit' to end the game or 'continue' to play again: ")
+            game_checker = input("Type 'quit' to end the game "
+                                 "or 'continue' to play again: ")
             if game_checker.strip().lower() == "quit":
                 exit()
             elif game_checker.strip() == "continue":
                 os.system("clear")
                 print("\t\t\t\t-------- 🔥Janken🔥 --------")
-                print('Game of Rock Paper Scissors, also known as "Janken" in Japanese\n')
+                print('Game of Rock Paper Scissors, also known as '
+                      '"Janken" in Japanese\n')
                 break
             else:
                 print("Invalid input. Please type 'quit' or 'continue.'")
 
 
 if __name__ == "__main__":
-    main()
+    play_game()
