@@ -107,7 +107,7 @@ class Game:
               f"Player 2 score: {self.player2_score}")
 
 
-def play_game():
+def play_janken():
     os.system("clear")
     print("\t\t\t\t-------- 🔥Janken🔥 --------")
     print('Game of Rock Paper Scissors, also known '
@@ -140,4 +140,4 @@ def play_game():
 
 
 if __name__ == "__main__":
-    play_game()
+    play_janken()
